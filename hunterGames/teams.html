@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Κυνήγι Θυσαυρού 2024</title>
+</head>
+
+<header>
+    <nav>
+        <a  href="teams.html">Ομάδες</a>
+        <a  href="routes.html">Διαδρομές</a>
+        <a  href="points.html">Σημεία</a>
+    </nav>
+</header>
+
+<body>
+    <div class="container">
+        <h2>Στοιχεία Ομάδων</h2>
+        <div class="table-content">
+            <table id="table-data-teams">
+                <thead>
+                    <tr>
+                        <th>Όνομα ομάδας</th>
+                        <th>Διαδρομή ομάδας</th>
+                        <th>Επιλογές</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+   
+            </table>
+        </div>
+
+        <div class="edit-buttons" style=" margin-top: 20px;">
+            <div class="outer">
+                <div class="box">
+                    <button class="button" onclick="popModal()">
+                        <img class="icon" id="group-icon" src="icons/groups.png"/>ΠΡΟΣΘΗΚΗ ΝΕΑΣ ΟΜΑΔΑΣ</button>
+
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="loading-circle"></div>
+
+    <div class="modal" id="addmodal">
+
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn" onclick="closeModal()">&times;</span>
+
+            <div class="slide" id="slide-container">
+                <div class="fields" id="team_fields">
+                    <h4>Ονομα ομάδας</h4>
+                    <input  id="team_name" type="text" placeholder="Ονομα ομάδας">
+                    
+                    <h4>Αριθμός μελών</h4>
+                    <input id="members_num" type="number" placeholder="Δώσε τον Αριθμό">
+
+                    <h4>Δώσε την κατηγορία της ομάδας</h4>
+                    <select class="input" id="dropdown" name="dropdown">
+                        <option value="" selected disabled>Επέλεξε την κατηγορία</option>
+                        <option value="big">Μεγάλο</option>
+                        <option value="option2">Μικρό</option>
+                    </select>
+
+                    <div >
+                        <button style="margin-left: -10px;" id="next" class="button" onclick="next()">ΕΠΟΜΕΝΟ</button>
+                    </div>
+
+
+                </div>
+
+                <div class="fields">
+                    <div id="member_fields"></div>
+                    <div class="buttons" id="buttons1">
+                        <button id="back" class="button" onclick="nextSlide()">ΠΙΣΩ</button>
+                        <button id="send" class="button" onclick="send(this)">ΥΠΟΒΟΛΗ</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+      
+        </div>
+    </div>
+    </div>
+    <script src="js/teams.js"></script>
+</body>
+</html>

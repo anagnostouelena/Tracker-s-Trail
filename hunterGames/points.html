@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Κυνήγι Θυσαυρού 2024</title>
+</head>
+<body>
+  <header>
+    <img onclick="backToHome()" class="logo"src="icons/stagon.png" alt="Stagon" >
+    <p>Κυνήγι Θησαυρού Μετεώρων</p>
+    <nav>
+        
+        <a  href="small_teams.html">Μικρό Κυνήγι</a>
+        <a  href="big_teams.html">Μεγάλο Κυνήγι</a>
+        <a  href="routes.html">Διαδρομές</a>
+        <a  href="points.html">Σημεία</a>
+    </nav>
+</header>
+
+  <div class="container">
+    <div class="table-content">
+      <table id="table-data-points">
+        <thead>
+          <tr>
+            <th>Όνομα Σημείου</th>
+            <th>Κριτής</th>
+            <th>Επιλογές</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="edit-buttons" style="margin-top: 20px;">
+      <div class="outer">
+        <div class="box">
+          <button class="button" onclick="popModal()">
+            <img class="icon" id="group-icon" src="icons/pin.png"/>ΠΡΟΣΘΗΚΗ ΝΕΟΥ ΣΗΜΕΙΟΥ
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="loading-circle"></div>
+  </div>
+
+  <div class="modal" id="addpointsmodal">
+    <div class="modal-content" style="overflow: hidden">
+      <span class="close" id="closeModalBtn" onclick="closeModal()">&times;</span>
+      <div> 
+        <div class="fields" id="points_fields" >
+          <div id="points">
+            <h4>Δώσε το όνομα του σημείου</h4>
+            <input style="margin-bottom: 5vh;" id="point_name" type="text" placeholder="point name">
+            <h4>Δώσε το όνομα του κριτή</h4>
+            <input style="margin-bottom: 5vh;" id="judge_name" type="text" placeholder="Όνομα">
+            <h4>Τηλέφωνο κριτή</h4>
+            <input style="margin-bottom: 5vh;" id="judge_phone" type="text" placeholder="Τηλέφωνο">
+            <h4>email</h4>
+            <input style="margin-bottom: 5vh;" id="judge_email" type="text" placeholder="email">
+          </div>
+          <button class="button" onclick="submitPoint()">ΥΠΟΒΟΛΗ</button> 
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="js/variable.js"></script>
+  <script src="js/highlight.js"></script>
+  <script src="js/points.js"></script>
+  <script src="js/logoClickListener.js"></script>
+
+  <footer>
+    <div class="container-footer">
+      <div class="copyright">
+        &copy; 2024 Tracker's Trail. All Rights Reserved.
+      </div>
+      <div class="developer-info">
+        <span>Designed and Developed by: Αναγνώστου Ελένη & Δέδες Κωνσταντίνος</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

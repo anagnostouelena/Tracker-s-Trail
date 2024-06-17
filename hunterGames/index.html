@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<header>
+  <img onclick="backToHome()" class="logo"src="icons/stagon.png" alt="Stagon" >
+  <p>Κυνήγι Θησαυρού Μετεώρων</p>
+  <nav>
+      
+      <a  href="small_teams.html">Μικρό Κυνήγι</a>
+      <a  href="big_teams.html">Μεγάλο Κυνήγι</a>
+      <a  href="routes.html">Διαδρομές</a>
+      <a  href="points.html">Σημεία</a>
+  </nav>
+
+
+ 
+</header>
+
+<body>
+  <div id="loading-circle"></div>
+
+  <div class="team-status" >
+
+    <div id="big" class="container1">
+      <h4 style=" margin: 10px;">Μεγάλες Ομάδες</h4>
+
+      
+      <div style="display: flex; margin: 10px;">      
+        <button style="margin-right: 10px;" class="button" onclick="start('big')">start</button>
+
+        <button style="background-color: #F44336; margin-right: 10px;" class="button" onclick="stop('big')">stop</button>
+        <button style="background-color: #FFA000;" class="button" onclick="duration('big')">Duration</button>
+        <p style="margin-left: 10px;" id="duration-big"></p>
+      </div>
+
+    </div>
+
+      <div id="small" class="container1">
+        <h4 style=" margin: 10px;">Μικρές Ομάδες</h4>
+
+        <div style="display: flex; margin: 10px;">      
+          <button style="margin-right: 10px;" class="button" onclick="start('small')">start</button>
+          <button style="background-color: #F44336; margin-right: 10px;" class="button" onclick="stop('small')">stop</button>
+          <button style="background-color: #FFA000;" class="button" onclick="duration('small')">Duration</button>
+          <p style="margin-left: 10px;" id="duration-small"></p>
+        </div>
+      </div>
+
+
+      
+
+    </div>
+
+    
+  </div>
+  </div>
+ 
+
+
+</div>
+
+
+  <script src="js/variable.js"></script>
+  <script src="js/highlight.js"></script>
+  <script src="js/logoClickListener.js"></script>
+
+  
+  <script src="js/times.js"></script>
+
+</body>
+
+<footer>
+  <div class="container-footer">
+    <div class="copyright">
+      &copy; 2024 Tracker's Trail. All Rights Reserved.
+    </div>
+    <div class="developer-info">
+      <span>Designed and Developed by: Αναγνώστου Ελένη & Δέδες Κωνσταντίνος</span>
+    </div>
+  </div>
+</footer>
+</html>

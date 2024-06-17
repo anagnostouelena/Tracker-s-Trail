@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Κυνήγι Θυσαυρού 2024</title>
+</head>
+
+<header>
+    <img onclick="backToHome()" class="logo"src="icons/stagon.png" alt="Stagon" >
+    <p>Κυνήγι Θησαυρού Μετεώρων</p>
+    <nav>
+        
+        <a  href="small_teams.html">Μικρό Κυνήγι</a>
+        <a  href="big_teams.html">Μεγάλο Κυνήγι</a>
+        <a  href="routes.html">Διαδρομές</a>
+        <a  href="points.html">Σημεία</a>
+    </nav>
+</header>
+
+<body>
+    <div class="container">
+        <!-- <h2>Στοιχεία Διαδρομών</h2> -->
+        <div class="table-content">
+            <table  id="table-data-routes">
+                <thead>
+                    <tr>
+                        <th>Όνομα Διαδρομής</th>
+                        <th>Διαδρομή</th>
+                        <th>Επιλογές</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+   
+            </table>
+        </div>
+
+        <div class="edit-buttons" style=" margin-top: 20px;">
+            <div class="outer">
+                <div class="box">
+                    <button class="button" onclick="popModal()"><img class="icon" id="group-icon" src="icons/map.png"/>ΠΡΟΣΘΗΚΗ ΝΕΑΣ ΔΙΑΔΡΟΜΗΣ</button>
+
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-circle"></div>
+
+    <div class="modal" id="addmodal">
+        <div class="modal-content" style="overflow: hidden">
+            <span class="close" id="closeModalBtn" onclick="closeModal()">&times;</span>
+
+            <div >
+                <div class="fields" id="routes_fields" >
+
+                    <div id="points"></div>
+
+
+                    <div id="route-points-dis"></div>
+
+                    <div style="margin-left: 30vh; margin-top: -50vh; margin-bottom: 40vh;">
+                        <h3 for="choices">Δώσε το όνομα της Διαδρομής</h3><input style="width: 300px;" id="route-name" type="text"/></div>
+
+                    <button style="margin-left: 20%;" id="next" class="button" onclick="submitRoute()">ΥΠΟΒΟΛΗ</button>
+
+                </div>
+
+
+
+            </div>
+      
+        </div>
+    </div>
+    </div>
+    
+  <script src="js/variable.js"></script>
+    <script src="js/highlight.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/logoClickListener.js"></script>
+</body>
+
+<footer>
+    <div class="container-footer">
+      <div class="copyright">
+        &copy; 2024 Tracker's Trail. All Rights Reserved.
+      </div>
+      <div class="developer-info">
+        <span>Designed and Developed by: Αναγνώστου Ελένη & Δέδες Κωνσταντίνος</span>
+      </div>
+    </div>
+  </footer>
+  
+</html>
