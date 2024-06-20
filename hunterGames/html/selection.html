@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<header>
+    <nav>
+        <a target="_blank" href="selection.html">Ομάδες</a>
+        <a target="_blank" href="routes.html">Σημεία & Διαδρομές</a>
+    </nav>
+</header>
+
+<body>
+
+<div class="selection-container">
+    <h1>Επιλογή κυνηγιού</h1>
+    
+    <div class="links">
+        <a href="teams.html?category=megalo" target="_blank">Μεγάλο κυνήγι</a>
+        <a href="teams.html?category=mikro" target="_blank">Μικρό κυνήγι</a>
+    </div>
+</div>
+
+
+<script>
+    function goToPage(selection) {
+        console.log(selection);
+        window.location.href = "map.html?category=" + "megalo";
+    }
+</script>
+
+</body>
+</html>

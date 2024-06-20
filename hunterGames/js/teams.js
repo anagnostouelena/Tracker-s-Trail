@@ -1,37 +1,37 @@
 const ip = myApp.ip; 
 refresh();
 let groupNames = [];
-function refresh() {
-    const loading = document.getElementById("loading-circle");
-    loading.style.display="flex";
-    var teamStatusElement = document.getElementById('secretVariable');
-    var teamStatusElementValue = teamStatusElement.value;
-    const xhr = new XMLHttpRequest();
-    var pathname = window.location.pathname;
-    var filename = pathname.split('/').pop();
-    let teamStatus = "";
-    
-    if (filename === "big_teams.html") {
-        teamStatus = "big"
-    } else {
-        teamStatus = "small"
-    }
-    
-    const url = ip + "/game/controlers/getTeams.php?group_status="+teamStatus;
-    xhr.open("GET", url, true);
-    
-    
-    xhr.onreadystatechange = function () {
+    function refresh() {
+        const loading = document.getElementById("loading-circle");
+        loading.style.display="flex";
+        var teamStatusElement = document.getElementById('secretVariable');
+        var teamStatusElementValue = teamStatusElement.value;
+        const xhr = new XMLHttpRequest();
+        var pathname = window.location.pathname;
+        var filename = pathname.split('/').pop();
+        let teamStatus = "";
         
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            const json = JSON.parse(xhr.responseText);
-            loading.style.display="none";
-            loadData(json);
+        if (filename === "big_teams.html") {
+            teamStatus = "big"
+        } else {
+            teamStatus = "small"
         }
-    };
-    
-    xhr.send();
-}
+        // const url = "/api/get-teams/?group_status=${teamStatus}";
+        const url =  "/api/teams/?group_status="+teamStatus;
+        xhr.open("GET", url, true);
+        
+        
+        xhr.onreadystatechange = function () {
+            
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const json = JSON.parse(xhr.responseText);
+                loading.style.display="none";
+                loadData(json);
+            }
+        };
+        
+        xhr.send();
+    }
 
 const loading = document.getElementById("loading-circle");
 let iterations = 0;
