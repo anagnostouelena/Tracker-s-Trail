@@ -1,7 +1,19 @@
 # Tracker's Trail
 
-  The current Tracke's Trail project has implemented a VPN connection and utilizes MariaDB for its database management. Features multiple routes that can be created at various points. The project includes teams and judges, with each team possessing a QR code. Judges use an Android app called Scann2Go to scan the QR codes. This allows judges to verify if a team is in the correct position along the specific route assigned to them.
-  Additionally, the project incorporates a timing mechanism. Each group will be presented with a series of riddles. The time has taken to solve each puzzle is recorded as teams progress from one puzzle to the next.
+## Overview
+
+ It offers multiple routes that can be created at various points, allowing for flexible tracking and organization. 
+
+### Features:
+- **Teams and Judges**:
+  - Each team is assigned a **QR code** for easy identification.
+  - **Judges** use the Android app **Scann2Go** to scan the QR codes, enabling them to verify whether the teams are in the correct position along their specific assigned route.\
+  - The **Tracker's Trail** project implements a secure VPN connection and utilizes **MariaDB** for efficient database management.
+
+- **Timing Mechanism**:
+  - A built-in timer records the time taken by each team to solve a series of riddles.
+  - Teams progress from one puzzle to the next, with the time spent on each puzzle being tracked and stored for performance evaluation.
+
+## License
 
 Please note that the code for this project is proprietary and cannot be copied.
-
